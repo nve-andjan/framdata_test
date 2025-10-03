@@ -1,0 +1,21 @@
+name: Deploy framdata Documentation
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/**'
+      - 'framdata/**'
+      - 'mkdocs.yml'
+      - 'pyproject.toml'
+  workflow_dispatch:
+
+jobs:
+  deploy-docs:
+    uses: ./.github/workflows/template_publish_docs.yml
+    permissions:
+      contents: write
+    with:
+      package_name: 'framdata'
+      source_paths: '["docs/**", "framdata/**", "mkdocs.yml", "pyproject.toml"]'
