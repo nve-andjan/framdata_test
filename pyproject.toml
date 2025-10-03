@@ -9,7 +9,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 
 dependencies = [
-    "framcore (>=0.0.3)",
+    "framcore (>=0.0.1)",
     "pandas (>=2.2.3)",
     "pyarrow",
     "openpyxl",
